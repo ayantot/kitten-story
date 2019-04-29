@@ -1,0 +1,29 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 79vh;
+}
+
+    .card {
+        background-color: grey;
+        border-radius: 6px;
+        box-shadow: 3px 3px 30px;
+        margin: 15px;
+        text-align: center;
+        height: 50vh;
+    }
+
+        .card:hover {
+
+            box-shadow: 10px 10px 30px black;
+        }
+
+        button {
+            background-color: blue;
+            border-radius: 5px;
+            color: black;
+
+        }
+    

@@ -1,0 +1,74 @@
+<div class="container">
+
+    <h1>Create your kittens</h1>
+  
+    <form name="kittenForm" #kittenForm=ngForm>
+  
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input 
+        class="form-control" 
+        id="name" 
+        name='nameKitten'
+        [(ngModel)]="nameKittenText" 
+        required
+        #nameKitten="ngModel"
+        [class.is-invalid]="nameKitten.invalid && nameKitten.touched"
+        type="text" 
+        >
+      </div>
+  
+      <div class="form-group">
+        <label for="race">Race</label>
+        <input       
+        class="form-control" 
+        id="race"
+        name='raceKitten'
+        [(ngModel)]="raceKittenText" 
+        required
+        #raceKitten="ngModel"
+        [class.is-invalid]="raceKitten.invalid && raceKitten.touched"
+        type="text" 
+        >
+      </div>
+  
+      <div class="form-group">
+          <label for="born">Born</label>
+          <input       
+          class="form-control" 
+          id="born"
+          name='bornKitten'
+          [(ngModel)]="bornKittenText" 
+          required
+          #bornKitten="ngModel"
+          [class.is-invalid]="bornKitten.invalid && bornKitten.touched"
+          type="date" 
+          >
+      </div>
+  
+      <div class="form-group">
+          <label for="photo">Photo</label>
+          <input      
+          class="form-control" 
+          id="photo"
+          name='photoKitten'
+          [(ngModel)]="photoKittenText"
+          #photoKitten="ngModel"
+          [class.is-invalid]="photoKitten.invalid && photoKitten.touched" 
+          required
+          type="text" 
+          >
+      </div>
+  
+      <button 
+      class="btn button" 
+      (click)='addKitten()'
+      type="submit"
+      [disabled]=!kittenForm.valid
+      >
+      Submit
+      </button>
+  
+    </form>
+  
+  </div>

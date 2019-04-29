@@ -1,0 +1,38 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50%;
+}
+
+    .card {
+        background-color: grey;
+        border-radius: 6px;
+        box-shadow: 3px 3px 30px;
+        margin: 15px;
+        text-align: center;
+        height: 50vh;
+    }
+
+        .card:hover {
+
+            box-shadow: 10px 10px 30px black;
+        }
+
+        button {
+            background-color: blue;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .card-img-overlay{
+            display: none;
+
+        }  
+        .card:hover .card-img-overlay {
+            color: white; 
+            display: block;
+            background-color: rgba(#8B8D8D,0.3)
+
+        }  
+
